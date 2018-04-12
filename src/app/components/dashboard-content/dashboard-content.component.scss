@@ -1,0 +1,81 @@
+@import '../../../sass/all';
+
+.row{
+}
+
+.card {
+  padding: $padding-medium $padding-base 0 $padding-base;
+  border: solid 1px $ui-grey-2;
+}
+
+.card-progress, .card-adminresults, .card-study-support, .card-mycareer, dashboard-newsupdates, dashboard-events, dashboard-ad  {
+  margin-top: $margin-medium;
+}
+
+// Fix gap below footer caused by hero position top
+dashboard-footer {
+  margin-bottom: -160px;
+  height: 290px;
+
+  //  Breakpoints
+  @include breakpoint (fromMedium) {
+    height: 170px;
+  }
+}
+
+.col-top {
+  align-self: flex-end;
+  height: 85px;
+  margin-top: $margin-base;
+
+  &:first-child {
+    .card-top {
+      background-color: $brand-primary;
+    }
+  }
+
+  .card-top {
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-medium $padding-base;
+    margin-top: $margin-base;
+
+    a {
+      color: $black;
+    }
+
+    //  Breakpoints
+    @include breakpoint (fromMedium) {
+      margin-top: 0;
+    }
+  }
+
+  //  Breakpoints
+  @include breakpoint (fromMedium) {
+    margin-top: 0;
+  }
+}
+
+// Right hand col content
+.card-top-rhs {
+  background: url('https://knowclive.github.io/dashboard/assets/img/promo-bgd.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 192px;
+  color: $white;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: $padding-base;
+  margin-top: $margin-medium;
+
+  a {
+    color: $white;
+  }
+
+  //  Breakpoints
+  @include breakpoint (fromMedium) {
+    margin-top: 0;
+  }
+}

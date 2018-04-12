@@ -1,0 +1,56 @@
+<!--<a class="edit-link" href="#">Edit</a>-->
+
+<h3>{{ studysupport.heading }}</h3>
+
+<p>{{ studysupport.summary }}</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <!--<ul>-->
+        <!--<li *ngFor="let support of supportContent" class="card-mini">-->
+        <!--<p>{{ support.title }}</p>-->
+        <!--<img [src]="support.imageUrl"  alt="">-->
+        <!--</li>-->
+        <!--</ul>-->
+        <ul>
+            <li class="card-mini col-md-12 col-xs-12"><a
+                    href="https://aat.invisionapp.com/share/WTGQWMW4GMR#/290019210_Search-For-Study-Support-Student"
+                    target="_blank">
+                <span class="card-mini__text">
+                <p>
+                {{ studysupport.card1.title }}
+                </p>
+                </span>
+                <img [src]="studysupport.card1.imageUrl" alt=""></a>
+            </li>
+
+            <li class="card-mini col-md-12 col-xs-12"><a href="https://www.aatcomment.org.uk/category/study-tips/" target="_blank">
+                <span class="card-mini__text">
+                <p>{{ studysupport.card2.title }}</p>
+                </span>
+                    <img
+                    [src]="studysupport.card2.imageUrl" alt=""></a>
+            </li>
+            <!--<li class="card-mini"><a href=""><p>{{ studysupport.card3.title }}</p><img [src]="studysupport.card3.imageUrl" alt=""></a></li>-->
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            <li class="card-mini col-md-12 col-xs-12"><a href="https://www.aat.org.uk/prod/s3fs-public/assets/Your_little_book_of_essential_study_support_0.pdf" target="_blank">
+                <span class="card-mini__text">
+                <p>{{ studysupport.card4.title }}</p>
+                </span>
+                    <img
+                    [src]="studysupport.card4.imageUrl" alt=""></a>
+            </li>
+            <li class="card-mini col-md-12 col-xs-12"><a href="https://forums.aat.org.uk/Forum/categories/for-student-members" target="_blank">
+                <span class="card-mini__text">
+                <p>{{ studysupport.card5.title }}</p>
+                </span>
+                    <img
+                    [src]="studysupport.card5.imageUrl" alt=""></a>
+            </li>
+            <!--<li class="card-mini"><a href=""><p>{{ studysupport.card6.title }}</p><img [src]="studysupport.card6.imageUrl" alt=""></a></li>-->
+        </ul>
+    </div>
+</div>

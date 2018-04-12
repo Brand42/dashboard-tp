@@ -1,0 +1,177 @@
+
+
+// =================================================
+// ========= BEM mixing for naming =================
+// =================================================
+
+
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// =================================================
+// example
+// @include breakpoint(fromMedium) {}
+// =================================================
+
+@mixin breakpoint($point) {
+  @if $point == fromSmall {
+    @media (min-width: $xSmall-width) { @content; }
+  } @else if $point == fromMedium {
+    @media (min-width: $medium-width) { @content; }
+  } @else if $point == fromLarge {
+    @media (min-width: $large-width) { @content; }
+  } @else if $point == mobileAndNarrow {
+    @media (max-width: $medium-width) { @content; }
+  } @else if $point == mobileOnly {
+    @media (max-width: $small-width) { @content; }
+  }
+}
+
+// =================================================
+// example
+// font-face(name, folderDir)
+// @include font-face(default-icons, '../fonts/default-icons/default-icons');
+// =================================================
+
+@mixin font-face($font-family, $file-path) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
+  }
+  // Chrome for Windows rendering fix : http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+// =================================================
+// border-radius mixin
+// @include border-radius(px)
+// =================================================
+
+@mixin border-radius($border-radius-small) {
+  -webkit-border-radius: $border-radius-small;
+  -moz-border-radius: $border-radius-small;
+  -ms-border-radius: $border-radius-small;
+  border-radius: $border-radius-small;
+}
+
+// =================================================
+// one direction center mixin
+// @include center(Boolean, Boolean)
+// =================================================
+
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// =================================================
+// transition mixin
+// @include transition($args...)
+// =================================================
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+// =================================================
+// transition flexbox
+// @include flexbox
+// @include flex-direction
+// @include flex-order
+// =================================================
+
+// browser prefixes for flexbox container
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+}
+
+@mixin flex( $val ) {
+  -webkit-flex: $val;
+  -moz-flex: $val;
+  -ms-flex: $val;
+  -o-flex: $val;
+  flex: $val;
+}
+
+// browser prefixes for direction
+@mixin flex-direction {
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+// browser prefixes for ordering
+@mixin flex-order($val) {
+  -webkit-box-ordinal-group: $val+1;
+  -moz-box-ordinal-group: $val+1;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+// =================================================
+// Position mixin
+// @include position()
+// =================================================
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// =================================================
+// Button sizes mixin
+// =================================================
+@mixin button-size($padding-base-vertical, $padding-base-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-base-vertical $padding-base-vertical;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}

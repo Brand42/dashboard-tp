@@ -1,0 +1,49 @@
+@import '../../../sass/all';
+
+.card-head {
+  padding-bottom: $padding-base;
+}
+
+.card-foot {
+  padding-bottom: $padding-medium;
+  border-bottom: 1px solid $ui-grey-2;
+}
+
+.card-img {
+  img {
+    width: 100%;
+  }
+
+  .tag-success {
+    position: relative;
+    bottom: 35px;
+    left: 14px;
+  }
+}
+
+.card-list {
+  padding-bottom: $padding-base;
+  &__item {
+    display: flex;
+    flex-flow: wrap;
+    padding-top: $padding-medium;
+
+    &-img {
+      flex: 0 0 35%;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    &-text {
+      flex: 0 0 65%;
+
+      a {
+        font-size: $font-size-small;
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

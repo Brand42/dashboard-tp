@@ -1,0 +1,35 @@
+<div class="header-mobile">
+
+  <popover-content #myPopover
+                   title=""
+                   [closeOnClickOutside]="true"
+                   class="header-mobile__popover">
+    <div class="user-details">
+      <div class="avatar">
+        <img src="https://knowclive.github.io/dashboard/assets/img/john-snow.jpg" alt="" width="60" height="60">
+      </div>
+      <div class="user-name">John Snow</div>
+      <div class="memberid">12345678</div>
+    </div>
+
+    <ul class="profile-menu">
+      <li><a href="">Profile and account</a></li>
+      <li><a href="">Student membership<br><span>[Change role]</span></a></li>
+      <li><a href="">Edit my details</a></li>
+      <li><a href="" class="ext-link">Visit the AAT website <i class="fas fa-external-link-alt"></i></a></li>
+      <li><a href="">Log out</a></li>
+    </ul>
+  </popover-content>
+
+  <div class="header-mobile__inner">
+    <img alt="AAT Home" height="30" src="https://www.aat.org.uk/assets/img/svg/aat_logo.svg"
+         title="AAT Home" width="69">
+
+    <a href="https://www.aat.org.uk/search" target="_blank"><i class="fas fa-search"></i></a>
+
+    <div class="avatar-mobile" [popover]="myPopover">
+      <img src="https://knowclive.github.io/dashboard/assets/img/john-snow.jpg" alt="" width="48" height="48">
+    </div>
+  </div>
+</div>
+

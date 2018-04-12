@@ -1,0 +1,183 @@
+@import '../sass/all';
+//@import '../sass/mixins';
+//@import '../sass/colours';
+//@import '../sass/font-sizes';
+
+.hero {
+  //position: absolute; was causing dashboard-content to scroll on top of hero
+  height: 282px;
+  z-index: -999;
+  background: $ui-grey-2;
+  //margin-left: 260px;
+  padding-left: $padding-medium;
+  padding-top: $padding-large;
+  p {
+    padding-top: 10px;
+  }
+}
+
+
+//fixed sidebar
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  //width: 260px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+
+  &-main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+
+    &-icons {
+      //width: 68px;
+      flex: 0 0 68px;
+      max-width: 68px;
+      background: $black;
+
+      &-brand {
+        padding: 20px 0 0 0;
+        height: 68px;
+      }
+
+      ul {
+        color: $white;
+        opacity: 0.8;
+        text-align: center;
+
+        .active {
+          border-left: 5px solid $brand-primary;
+          &:hover {
+            color: $white;
+            background: $black;
+          }
+        }
+
+        li {
+          padding: $padding-base;
+          height: 68px;
+          cursor: pointer;
+
+          i {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &__menu {
+      //width: 192px;
+      flex: 0 0 192px;
+      max-width: 192px;
+      background: $ui-grey-4;
+      button {
+        background: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0;
+        padding: $padding-base $padding-base 0 0;
+        float: right;
+        position: relative;
+        top: 10px;
+
+        i.fa-angle-left {
+          color: $white;
+          font-size: 20px;
+        }
+      }
+
+      ul {
+        top: 68px;
+        position: relative;
+        color: $white;
+        opacity: 0.8;
+        cursor: pointer;
+
+        li {
+          padding: $padding-base;
+          height: 68px;
+        }
+      }
+    }
+  }
+}
+
+//main content
+.dashboard {
+  margin-left: 0; /* Same as the width of the sidebar */
+
+  button {
+    background: transparent;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    padding: $padding-base $padding-base 0 0;
+    float: none;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+
+    i.fa-angle-right {
+      color: $black;
+      font-size: 20px;
+      //transform: translateX(44px);
+    }
+  }
+
+//  Breakpoints
+  @include breakpoint (fromMedium) {
+    margin-left: 260px; /* Same as the width of the sidebar */
+  }
+}
+
+dashboard-content {
+  display: block;
+  position: relative;
+  top: -40px;
+
+  //  Breakpoints
+  @include breakpoint (fromMedium) {
+    top: -160px;
+  }
+}
+
+.hero-mobile {
+  background: $ui-grey-2;
+  position: relative;
+  top: -27px;
+  padding: $padding-medium 0 0 $padding-medium;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  top: -43px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 68px;
+  //height: 96px;
+  //text-indent: -9999px;
+  cursor: pointer;
+  outline: none;
+  background: $black;
+  border: 0;
+  color: $white;
+
+  i {
+    font-size: 24px;
+    position: relative;
+    right: -5px;
+  }
+}
+
+.main-wrapper-small {
+  // Momentum scrolling for mobile: https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden; // Stop weird right gap scrolling happening when iOS momentus scrolling applied
+  height: 100%;
+}

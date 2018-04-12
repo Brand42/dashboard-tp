@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="header-toolbar">
+    <nav class="header-toolbar__inner">
+      <ul>
+        <li>
+          <label>
+            <i class="fas fa-search"></i>
+            <input type="search" name="search" placeholder="Search AAT...">
+          </label>
+        </li>
+        <li [popover]="myPopover">
+          <div class="avatar">
+            <img src="https://knowclive.github.io/dashboard/assets/img/john-snow.jpg" alt="" width="48" height="48">
+          </div>
+
+          <div class="member-details">
+            <div class="name">{{ header.firstname + ' ' + header.lastname}}</div>
+            <div class="memberid">Membership number: 12345678</div>
+          </div>
+
+          <i class="fas fa-ellipsis-v"></i>
+
+        </li>
+      </ul>
+      <popover-content #myPopover
+                       title=""
+                       [closeOnClickOutside]="true"
+                       class="header-toolbar__inner__popover">
+        <ul class="profile-menu">
+          <li><a href="">Profile and account</a></li>
+          <li><a href="">Student membership<br><span>Change role</span></a></li>
+          <li><a href="">Edit my details</a></li>
+          <li><a href="" class="ext-link">Visit the AAT website <i class="fas fa-external-link-alt"></i></a></li>
+          <li><a href="">Log out</a></li>
+        </ul>
+      </popover-content>
+    </nav>
+
+  </div>
+</header>

@@ -1,0 +1,61 @@
+// ----------------------------------------------------------
+// COLOURS
+// ----------------------------------------------------------
+
+//Primary palette and their shades
+
+$brand-primary: #00ab4e; // AAT primary Green
+$brand-primary-10: #E5F6EC;
+$brand-primary-60: #65CB93;
+$brand-primary-80: #32BA70;
+$brand-primary-90: #18B25E;
+
+$lagoon: #3BCEAC;
+$artic: #59D3DB;
+$coral: #FF4F53;
+$pinapple: #FFD432;
+$midnight: #006578;
+
+$cta-color: #F28300; // Orange
+
+$white: #fff !default;
+$black: #1A1A1A !default;
+
+$ui-grey-1:               #F8F8F8;
+$ui-grey-2:               #DFE1E5;
+$ui-grey-3:               #C3C3C3;
+$ui-grey-4:               #4A4A4A;
+
+// Notifications
+$status: #2F81D6;
+$success: #00883E;
+$warning: #F7A700;
+$error: #E22B25;
+
+//$gray-base:              #000 !default;
+//$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+//$gray-lightest:          lighten($gray, 45%);
+
+
+// Background colours light gray
+$bgd-primary: #f4f4ef;
+$bgd-secondary: #edede5;
+
+// Border colours - gray
+$border: #dfdfd1;
+$cta-border:  #d07100; // Orange - border/box shadow
+$cta-hover:  #ff8c04; // Orange - hover/active
+
+
+//Button colours
+$btn-border: #32BA70; // green
+$btn-hover: #2f2f2f; // dark gray
+
+// Text colours
+$text-colour-base: #525c65; // lighter gray
+$text-colour-medium: #8d8d8d; // dark medium
+$text-colour-dark: #2f2f2f; // dark gray
+
+//Hero
+$hero-background-color: $white !default; // white
+$hero-text-color: $brand-primary !default; // green

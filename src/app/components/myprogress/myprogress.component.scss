@@ -1,0 +1,52 @@
+@import '../../../sass/all';
+
+.row {
+  padding-top: $padding-base;
+}
+
+.drawer {
+  border-bottom: 1px solid $ui-grey-2;
+  border-top: 1px solid $ui-grey-2;
+  cursor: pointer;
+  p {
+    color: $brand-primary;
+    font-weight: 700;
+    &:hover {
+      color: $midnight;
+      text-decoration: underline;
+    }
+  }
+}
+
+.module-title {
+  position: relative;
+  left: 15px;
+  font-size: $font-size-small;
+}
+
+.fa-check-circle {
+  color: $success;
+  font-size: 20px;
+}
+
+.fa-check {
+  font-size: 16px;
+}
+
+.accordion {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s ease;
+  .row {
+    padding-bottom: $padding-base;
+    border-bottom: 1px solid $ui-grey-2;
+  }
+}
+
+.accordion.open {
+  max-height: 400px;
+  margin-left: -$padding-base;
+  margin-right: -$padding-base;
+  padding: 0 $padding-base;
+}

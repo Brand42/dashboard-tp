@@ -1,0 +1,169 @@
+<!--<h1>-->
+<!--{{title}}-->
+<!--</h1>-->
+
+<!--<ul>-->
+<!--<li><a [routerLink]="['home']" routerLinkActive="active">Home</a></li>-->
+<!--<li><a [routerLink]="['about']" routerLinkActive="active">About</a></li>-->
+<!--<li><a [routerLink]="['contact']" routerLinkActive="active">Contact</a></li>-->
+<!--</ul>-->
+
+<!--<button class="btn btn-success" style="margin-left:80px;" [@myTrigger]="state" (click)="toggleState()">My Button</button>-->
+<!--<button class="btn btn-success" style="margin-left:80px;" (click)="toggleState()" [@removeMe]="btnState">My Button</button>-->
+
+<!--<ul>-->
+<!--&lt;!&ndash;<li *ngFor="let item of items" [@myTrigger]="state">{{ item }}</li>&ndash;&gt;-->
+<!--<li *ngFor="let item of items" [@myTrigger]="state" (@myTrigger.start)="animStart($event)" (@myTrigger.done)="animDone($event)">{{ item }}</li>-->
+<!--</ul>-->
+
+<!--<p>{{ animDetails }}</p>-->
+
+<!--<page></page>-->
+
+
+<div class="main-wrapper-large d-none d-sm-block">
+
+    <dashboard-header></dashboard-header>
+    <!--header-->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-main">
+            <div class="sidebar-main-icons">
+                <div class="sidebar-main-icons-brand">
+                    <img alt="AAT Home" height="30" src="https://www.aat.org.uk/assets/img/svg/aat_logo.svg"
+                         title="AAT Home" width="69">
+                </div>
+
+                <ul>
+                    <li class="active"><i class="fas fa-home"></i></li>
+                    <li><i class="far fa-clipboard"></i></li>
+                    <li><i class="far fa-life-ring"></i></li>
+                    <li><i class="fas fa-suitcase"></i></li>
+                    <li><i class="fas fa-users"></i></li>
+                    <li><i class="fas fa-id-card"></i></li>
+                    <li><i class="far fa-newspaper"></i></li>
+                </ul>
+            </div>
+            <!--sidebar-main-icons-->
+
+            <div class="sidebar-main__menu" [@sideMenuAnime]="openClose">
+                <button (click)="hideAndShow()" role="button" class="btn-sidemenu__close"><i class="fas fa-angle-left"></i></button>
+                <ul>
+                    <li>MyAAT</li>
+                    <li>Training and assessment</li>
+                    <li>Professional zone</li>
+                    <li>My career</li>
+                    <li>Support resources</li>
+                    <li>My membership</li>
+                    <li>News and events</li>
+                </ul>
+
+            </div>
+            <!--sidebar-main__menu-->
+        </div>
+        <!--Sidebar container-->
+
+    </aside>
+    <!--sidebar-->
+
+
+    <div class="hero container-fluid" [@heroAnime]="openClose">
+        <h1 class="myaat-h1">Hello John.</h1>
+        <p>Welcome to your dashboard, notice anything new?</p>
+    </div>
+    <!--hero-->
+
+    <article class="dashboard" [@mainContainerAnime]="openClose">
+        <button (click)="hideAndShow()" role="button" class="btn-sidemenu__close"><i class="fas fa-angle-right"></i></button>
+
+        <dashboard-content class="container-fluid"></dashboard-content>
+
+    </article>
+
+
+    <!--<router-outlet></router-outlet>-->
+</div>
+<!--main wrapper large-->
+
+
+
+<div class="main-wrapper-small d-sm-none d-md-none d-lg-none">
+
+    <dashboard-headermobile></dashboard-headermobile>
+
+    <button (click)="hideShowMobileMenu()" [@menuAnimeMobileIcon]="menuState" class="hamburger">
+        <i class="fas fa-bars"></i>
+    </button>
+
+
+    <dashboard-mobilemenu [@menuAnimeMobile]="menuState"></dashboard-mobilemenu>
+    <!--<dashboard-mobileusermenu></dashboard-mobileusermenu>-->
+
+    <!--header-->
+
+    <!--<aside class="sidebar">-->
+
+        <!--<div class="sidebar-main">-->
+            <!--<div class="sidebar-main-icons">-->
+                <!--<div class="sidebar-main-icons-brand">-->
+                    <!--<img alt="AAT Home" height="30" src="https://www.aat.org.uk/assets/img/svg/aat_logo.svg"-->
+                         <!--title="AAT Home" width="69">-->
+                <!--</div>-->
+
+                <!--<ul>-->
+                    <!--<li><i class="fas fa-home"></i></li>-->
+                    <!--<li><i class="far fa-clipboard"></i></li>-->
+                    <!--<li><i class="far fa-life-ring"></i></li>-->
+                    <!--<li><i class="fas fa-suitcase"></i></li>-->
+                    <!--<li><i class="fas fa-users"></i></li>-->
+                    <!--<li><i class="fas fa-id-card"></i></li>-->
+                    <!--<li><i class="far fa-newspaper"></i></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;sidebar-main-icons&ndash;&gt;-->
+
+            <!--<div class="sidebar-main__menu">-->
+                <!--&lt;!&ndash;<button (click)="hideAndShow()" role="button" class="btn-sidemenu__close"><i class="fas fa-angle-left"></i></button>&ndash;&gt;-->
+                <!--<ul>-->
+                    <!--<li>MyAAT</li>-->
+                    <!--<li>Training and assessment</li>-->
+                    <!--<li>Professional zone</li>-->
+                    <!--<li>My career</li>-->
+                    <!--<li>Support resources</li>-->
+                    <!--<li>My membership</li>-->
+                    <!--<li>News and events</li>-->
+                <!--</ul>-->
+
+            <!--</div>-->
+            <!--&lt;!&ndash;sidebar-main__menu&ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash;Sidebar container&ndash;&gt;-->
+
+    <!--</aside>-->
+    <!--&lt;!&ndash;sidebar&ndash;&gt;-->
+
+
+    <div class="hero-mobile container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="myaat-h1">Hello John</h1>
+                <p>Welcome to your dashboard, notice anything new?</p>
+            </div>
+        </div>
+    </div>
+    <!--hero-->
+
+    <article class="dashboard">
+        <!--<button (click)="hideAndShow()" role="button" class="btn-sidemenu__close"><i class="fas fa-angle-right"></i></button>-->
+
+        <dashboard-content class="container-fluid"></dashboard-content>
+
+    </article>
+
+
+    <!--<router-outlet></router-outlet>-->
+</div>
+<!--main wrapper small-->
+
+

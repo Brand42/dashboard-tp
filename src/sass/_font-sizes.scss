@@ -1,0 +1,132 @@
+// The font size set on the root html element.
+
+$font-size-small: 14px;
+
+@include breakpoint(fromSmall) {
+
+  $font-size-base: 11px;
+
+  // Heading font sizes
+  $font-size-hero:          ceil(($font-size-base * 4.8)); // ~53px
+  $font-size-h1:            ceil(($font-size-base * 3.05)); // ~34px
+  $font-size-h2:            ceil(($font-size-base * 2.4)); // ~27px
+  $font-size-h3:            ceil(($font-size-base * 2)); // ~22px
+  $font-size-h4:            ceil(($font-size-base * 1.6)); // ~18px
+  $font-size-p:            ceil(($font-size-base * 1.2)); // ~14px
+
+  .h1-hero {
+    font-size: $font-size-hero;
+  }
+
+  h1, .h1 {
+    font-size: $font-size-h1;
+    color: black;
+  }
+
+  h2, .h2 {
+    font-size: $font-size-h2;
+
+    font-weight: $font-weight-brand-light;
+  }
+
+  h3, .h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-brand-light;
+  }
+
+  h4, .h4 {
+    font-size: $font-size-h4;
+    //font-family: $heading-font-family-bold;
+    //color: yellowgreen;
+  }
+
+  p, a {
+    font-size: $font-size-p;
+  }
+
+}
+
+@include breakpoint(fromMedium) {
+
+  $font-size-base: 11px;
+
+  $font-size-hero:          ceil(($font-size-base * 5.5)); // ~61px
+  $font-size-h1:            ceil(($font-size-base * 3.5)); // ~39px
+  $font-size-h2:            ceil(($font-size-base * 2.8)); // ~31px
+  $font-size-h3:            ceil(($font-size-base * 2.2)); // ~25px
+  $font-size-h4:            ceil(($font-size-base * 1.8)); // ~20px
+  $font-size-p:             ceil(($font-size-base * 1.4)); // ~16px
+
+  .h1-hero {
+    font-size: $font-size-hero;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-brand-light;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-brand-light;
+  }
+
+  h4 {
+    font-size: $font-size-h4;
+  }
+
+  p, a {
+    font-size: $font-size-p;
+  }
+}
+
+@include breakpoint(fromLarge) {
+
+  $font-size-base: 14px;
+
+  $font-size-hero:          ceil(($font-size-base * 7.2)); // ~101px
+  $font-size-h1:            ceil(($font-size-base * 4.05)); // ~57px
+  $font-size-h2:            ceil(($font-size-base * 3.05)); // ~43px
+  $font-size-h3:            ceil(($font-size-base * 2.275)); // ~32px
+  $font-size-h4:            ceil(($font-size-base * 1.7)); // ~24px
+  $font-size-p:             ceil(($font-size-base * 1.275)); // ~18px
+
+  .h1-hero {
+    font-size: $font-size-hero;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-brand-light;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+    //font-weight: $font-weight-brand-light;
+  }
+
+  h4 {
+    font-size: $font-size-h4 !important;
+  }
+
+  p, a {
+    font-size: $font-size-p;
+  }
+}
+
+
+//$font-family-base:      'Open Sans', Arial, Helvetica, sans-serif;
+//$heading-font-family:   'Trade Gothic W01', Arial, Helvetica, sans-serif;
+//$heading-font-family-bold:   'Trade Gothic W04', Arial, Helvetica, sans-serif;
+//$font-weight-brand-light:100;
+//$font-weight-light:     300;
+//$font-weight-regular:   400;
+//$font-weight-bold:      700;

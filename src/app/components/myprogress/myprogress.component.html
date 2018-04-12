@@ -1,0 +1,123 @@
+<!--<a class="edit-link" href="#">Edit</a>-->
+<h3>{{ myprogress.title }}</h3>
+
+
+<p>{{ myprogress.summary }}</p>
+
+<div class="row drawer" (click)="isClassVisible1 = !isClassVisible1;">
+    <div class="col-md-7"><p>{{ myprogress.item1.title }}</p></div>
+    <div class="col-md-2"><span class="tag tag-success">{{ myprogress.item1.task }}</span></div>
+    <div class="col-md-2"><span>{{ myprogress.item1.status }}</span></div>
+    <div class="col-md-1"><i class="fas fa-check-circle"></i></div>
+</div>
+
+<div class="accordion" [ngClass]="{'open': isClassVisible1 }">
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item1.module.title1 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item1.module.title2 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+</div>
+
+<div class="row drawer" (click)="isClassVisible2 = !isClassVisible2;">
+    <div class="col-md-7"><p>{{ myprogress.item2.title }}</p></div>
+    <div class="col-md-2"><span class="tag tag-success">{{ myprogress.item2.task }}</span></div>
+    <div class="col-md-2"><span>{{ myprogress.item2.status }}</span></div>
+    <div class="col-md-1"><i class="fas fa-check-circle"></i></div>
+</div>
+
+<div class="accordion" [ngClass]="{'open': isClassVisible2 }">
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item2.module.title1 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item2.module.title2 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item2.module.title2 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item2.module.title2 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+</div>
+
+<div class="row drawer" (click)="isClassVisible3 = !isClassVisible3;">
+    <div class="col-md-7"><p>{{ myprogress.item3.title }}</p></div>
+    <div class="col-md-2"><span class="tag tag-my-progress">{{ myprogress.item3.task }}</span></div>
+    <div class="col-md-2"><span>{{ myprogress.item3.status }}</span></div>
+    <div class="col-md-1"><img src="https://knowclive.github.io/dashboard/assets/img/my-progress.svg" alt=""></div>
+</div>
+
+<div class="accordion" [ngClass]="{'open': isClassVisible3 }">
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item3.module.title1 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-11"><span class="module-title">{{ myprogress.item3.module.title2 }}</span></div>
+        <div class="col-md-1"><i class="fas fa-check"></i></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12"><span class="module-title">{{ myprogress.item3.module.title3 }}</span></div>
+    </div>
+</div>
+
+<div class="row drawer" (click)="isClassVisible4 = !isClassVisible4;">
+    <div class="col-md-7"><p>{{ myprogress.item4.title }}</p></div>
+    <div class="col-md-2"><span class="tag tag-pending">{{ myprogress.item4.task }}</span></div>
+    <div class="col-md-2"><span>{{ myprogress.item4.status }}</span></div>
+    <div class="col-md-1"><i class="far fa-circle"></i></div>
+</div>
+
+<div class="accordion" [ngClass]="{'open': isClassVisible4 }">
+    <div class="row">
+        <div class="col-md-12"><span class="module-title">{{ myprogress.item4.module.title1 }}</span></div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12"><span class="module-title">{{ myprogress.item4.module.title2 }}</span></div>
+
+    </div>
+</div>
+
+
+
+
+<!-- User input add new items functionality-->
+
+<!--<div>-->
+    <!--<h2> Grocery list manager </h2>-->
+
+    <!--<ul class="list-group">-->
+        <!--<li *ngFor="let task of tasks" class="list-group-item">-->
+            <!--<span> {{ task.name }} </span>-->
+        <!--</li>-->
+    <!--</ul>-->
+
+
+    <!--<div class="row">-->
+        <!--<div class="col-xs-6 col-md-4">-->
+            <!--<div class="input-group">-->
+                <!--<input type="text" class="form-control" placeholder="enter grocery items" [(ngModel)]="task" />-->
+                <!--<div class="input-group-btn">-->
+                    <!--<button class="btn btn-primary" type="button" (click)="onClick()">-->
+                        <!--<span class="glyphicon glyphicon-ok"></span>-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+<!--</div>-->

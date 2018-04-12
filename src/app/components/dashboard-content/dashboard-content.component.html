@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-4 col-top">
+        <div class="card card-top">
+            <a href="https://www.aatgreenroom.org" target="_blank">
+            <h4 class="h4">{{ dashcontent.heading1 }}</h4>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4 col-top">
+        <div class="card card-top">
+            <a href="https://aat.invisionapp.com/share/WTGQWMW4GMR#/290019215_My-Bookmarked-Items-Student" target="_blank">
+            <h4 class="h4"><i class="far fa-star">&nbsp;&nbsp;</i>{{ dashcontent.heading2 }}</h4>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-top-rhs">
+            <a href="https://www.aat.org.uk/prod/s3fs-public/assets/Your_little_book_of_essential_study_support_0.pdf"
+               target="_blank"><h4 class="h4">{{ dashcontent.heading3 }}</h4></a>
+        </div>
+    </div>
+</div>
+<!--top row-->
+
+<div class="row">
+    <div class="col-md-8">
+        <!--MyProgress component not required until later development-->
+        <!--<div class="card card-progress">-->
+            <!--<dashboard-myprogress></dashboard-myprogress>-->
+        <!--</div>-->
+        <div class="card card-study-support">
+            <dashboard-studysupport></dashboard-studysupport>
+        </div>
+        <div class="card card-adminresults">
+            <dashboard-adminresults></dashboard-adminresults>
+        </div>
+        <div class="card card-mycareer">
+            <dashboard-mycareer></dashboard-mycareer>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <dashboard-newsupdates class="card"></dashboard-newsupdates>
+        <dashboard-events class="card"></dashboard-events>
+        <dashboard-ad></dashboard-ad>
+    </div>
+    <div class="col-md-12 px-0">
+        <dashboard-primarypush></dashboard-primarypush>
+    </div>
+
+    <div class="col-md-12 px-0">
+        <dashboard-footer></dashboard-footer>
+    </div>
+
+</div>
+<!--second row-->

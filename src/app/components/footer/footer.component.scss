@@ -1,0 +1,67 @@
+@import '../../../sass/all';
+
+:host {
+  background: $ui-grey-4;
+  display: block;
+
+  .footer {
+    padding: $padding-medium 0 0 $padding-medium;
+
+    &__brand {
+      padding-bottom: $padding-base;
+    }
+
+    ul {
+      color: $white;
+      display: flex;
+    }
+
+    &__social-links {
+      position: relative;
+      top: 12px;
+
+      li {
+        padding-right: $padding-medium;
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__policies {
+      padding-top: $padding-base;
+      border-top: 1px solid $white;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          padding-right: $padding-base;
+
+          a {
+            color: $white;
+            font-size: $font-size-small;
+            font-weight: 400;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      //  Breakpoints
+      @include breakpoint (fromMedium) {
+
+        ul {
+          display: flex;
+          flex-direction: row;
+        }
+
+      }
+
+    }
+
+  }
+}

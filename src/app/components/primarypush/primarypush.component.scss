@@ -1,0 +1,41 @@
+@import '../../../sass/all';
+
+.primary-banner {
+  margin-top: $margin-large;
+  //background: $ui-grey-2;
+  //background-image: url("/assets/img/primary-push-student.jpg");
+  background-image: url("https://knowclive.github.io/dashboard/assets/img/primary-push-student.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 55% center;
+  overflow: hidden;
+  height: 400px;
+  color: $white;
+
+  &__inner {
+    width: 100%;
+    padding: $padding-large $padding-base 0 $padding-base;
+    position: relative;
+    top: 50px;
+
+    h1 {
+      color: $white;
+    }
+  }
+
+  //  Breakpoints
+  @include breakpoint (fromMedium) {
+    background-size: inherit;
+    background-position: center center;
+
+    &__inner {
+      width: 620px;
+      padding: 0 $padding-base 0 $padding-large;
+    }
+  }
+}
+
+
+//background-size: cover;
+//background-position: 100% top;
+//background-attachment: fixed;
