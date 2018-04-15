@@ -1,0 +1,10 @@
+@import '../../../sass/all';
+
+.centre-details {
+  padding-top: $padding-base;
+
+  span {
+    font-size: $font-size-small;
+    font-weight: 700;
+  }
+}

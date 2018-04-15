@@ -28,6 +28,7 @@ import {MobilemenuComponent} from './components/mobilemenu/mobilemenu.component'
 import {HeadermobileComponent} from './components/headermobile/headermobile.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AdComponent} from './components/ad/ad.component';
+import { CentrepickerComponent } from './components/centrepicker/centrepicker.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {AdComponent} from './components/ad/ad.component';
     MobilemenuComponent,
     HeadermobileComponent,
     FooterComponent,
-    AdComponent
+    AdComponent,
+    CentrepickerComponent
   ],
   imports: [
     BrowserModule,
