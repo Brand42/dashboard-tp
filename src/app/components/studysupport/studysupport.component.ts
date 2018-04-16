@@ -11,56 +11,64 @@ import {Component, OnInit} from '@angular/core';
 // ];
 
 @Component({
-  selector: 'dashboard-studysupport',
-  templateUrl: './studysupport.component.html',
-  styleUrls: ['./studysupport.component.scss']
+    selector: 'dashboard-studysupport',
+    templateUrl: './studysupport.component.html',
+    styleUrls: ['./studysupport.component.scss']
 })
 
 export class StudysupportComponent implements OnInit {
 
-  studysupport = {
-    heading: 'Study support',
-    summary: 'Access study support resources for all areas of your qualification.',
-    card1: {
-      title: 'Search for study support',
-      imageUrl: 'https://knowclive.github.io/dashboard/assets/img/studysupport/search-by-unit.png'
-      // imageUrl: '/assets/img/studysupport/search-by-unit.png'
-    },
-    card2: {
-      title: 'Study tips on AAT Comment',
-      imageUrl: 'https://knowclive.github.io/dashboard/assets/img/studysupport/green-light.png'
-    },
-    card3: {
-      title: 'Guidance',
-      imageUrl: '/assets/img/studysupport/guidance.png'
-    },
-    card4: {
-      title: 'Essential study support (ebook)',
-      imageUrl: 'https://knowclive.github.io/dashboard/assets/img/studysupport/e-learning.png'
-    },
-    card5: {
-      title: 'Ask a question in our forums',
-      imageUrl: 'https://knowclive.github.io/dashboard/assets/img/studysupport/sample-assess.png'
-    },
-    card6: {
-      title: 'Events and networking',
-      imageUrl: 'https://knowclive.github.io/dashboard/assets/img/studysupport/events.png'
-    },
-  };
+    studysupport = {
+        heading: 'Study support',
+        summary: 'Access study support resources for all areas of your qualification.',
+        card1: {
+            title: 'Search for study support',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/search-by-unit.png'
+            // imageUrl: '/assets/img/studysupport/search-by-unit.png'
+        },
+        card2: {
+            title: 'Study tips on AAT Comment',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/green-light.png'
+        },
+        card3: {
+            title: 'Guidance',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/guidance.png'
+        },
+        card4: {
+            title: 'Essential study support (ebook)',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/e-learning.png'
+        },
+        card5: {
+            title: 'Ask a question in our forums',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/sample-assess.png'
+        },
+        card6: {
+            title: 'Events and networking',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/events.png'
+        },
+        card7: {
+            title: 'Events and networking',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/resource1.png'
+        },
+        card8: {
+            title: 'Events and networking',
+            imageUrl: 'https://knowclive.github.io/dashboard-tp/assets/img/studysupport/resource2.png'
+        },
+    };
 
-  // This was for a ngFor loop
-  // supportContent = studySupportContent;
+    // This was for a ngFor loop
+    // supportContent = studySupportContent;
 
-  // public studylist = [
-  //   'stuff1',
-  //   'stuff2',
-  //   'stuff3'
-  // ];
+    // public studylist = [
+    //   'stuff1',
+    //   'stuff2',
+    //   'stuff3'
+    // ];
 
-  constructor() {
-  }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

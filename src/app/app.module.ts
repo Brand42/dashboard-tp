@@ -29,6 +29,7 @@ import {HeadermobileComponent} from './components/headermobile/headermobile.comp
 import {FooterComponent} from './components/footer/footer.component';
 import {AdComponent} from './components/ad/ad.component';
 import { CentrepickerComponent } from './components/centrepicker/centrepicker.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CentrepickerComponent } from './components/centrepicker/centrepicker.co
     HeadermobileComponent,
     FooterComponent,
     AdComponent,
-    CentrepickerComponent
+    CentrepickerComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
