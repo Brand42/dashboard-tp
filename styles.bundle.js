@@ -6,10 +6,10 @@ webpackJsonp([2,4],{
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(532);
+var content = __webpack_require__(533);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(607)(content, {});
+var update = __webpack_require__(610)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -27,7 +27,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 532:
+/***/ 533:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)();
@@ -42,7 +42,7 @@ exports.push([module.i, "body {\n  font-family: \"Open Sans\", Arial, Helvetica,
 
 /***/ }),
 
-/***/ 607:
+/***/ 610:
 /***/ (function(module, exports) {
 
 /*
@@ -295,7 +295,7 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 612:
+/***/ 615:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(341);
@@ -360,5 +360,5 @@ module.exports = function() {
 
 /***/ })
 
-},[612]);
+},[615]);
 //# sourceMappingURL=styles.bundle.js.map
