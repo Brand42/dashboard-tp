@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'dashboard-centrepicker',
-  templateUrl: './centrepicker.component.html',
-  styleUrls: ['./centrepicker.component.scss']
+    selector: 'dashboard-centrepicker',
+    templateUrl: './centrepicker.component.html',
+    styleUrls: ['./centrepicker.component.scss']
 })
 export class CentrepickerComponent implements OnInit {
 
-  constructor() { }
+    isClassVisible1: false;
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
 
 }

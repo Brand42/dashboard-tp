@@ -52,8 +52,13 @@ span.small-text {
 }
 
 //Global
-.edit-link, .centre-select {
+.edit-link {
   float: right;
+}
+
+.centre-select {
+  display: block;
+  margin: 10px 0 $margin-medium 0;
 }
 
 //Single components

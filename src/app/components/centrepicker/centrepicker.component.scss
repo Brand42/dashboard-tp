@@ -8,3 +8,29 @@
     font-weight: 700;
   }
 }
+
+.centre-header  {
+  display: flex;
+  align-items: center;
+  .centre-link {
+    margin-left: $margin-base;
+  }
+}
+
+.accordion {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s ease;
+  .row {
+    padding-bottom: $padding-base;
+    border-bottom: 1px solid $ui-grey-2;
+  }
+}
+
+.accordion.open {
+  max-height: 400px;
+  margin-left: -$padding-base;
+  margin-right: -$padding-base;
+  padding: 0 $padding-base;
+}
