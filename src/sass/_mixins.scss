@@ -30,15 +30,29 @@
 
 @mixin breakpoint($point) {
   @if $point == fromSmall {
-    @media (min-width: $xSmall-width) { @content; }
+    @media (min-width: $xSmall-width) {
+      @content;
+    }
   } @else if $point == fromMedium {
-    @media (min-width: $medium-width) { @content; }
+    @media (min-width: $medium-width) {
+      @content;
+    }
   } @else if $point == fromLarge {
-    @media (min-width: $large-width) { @content; }
+    @media (min-width: $large-width) {
+      @content;
+    }
+  }  @else if $point == fromLarger {
+    @media (min-width: $larger-width) {
+      @content;
+    }
   } @else if $point == mobileAndNarrow {
-    @media (max-width: $medium-width) { @content; }
+    @media (max-width: $medium-width) {
+      @content;
+    }
   } @else if $point == mobileOnly {
-    @media (max-width: $small-width) { @content; }
+    @media (max-width: $small-width) {
+      @content;
+    }
   }
 }
 
