@@ -73,6 +73,8 @@
       flex: 0 0 192px;
       max-width: 192px;
       background: $ui-grey-4;
+      overflow: auto;
+
       button {
         background: transparent;
         border-color: transparent;
@@ -98,7 +100,7 @@
 
         li {
           padding: $padding-base;
-          height: 68px;
+          min-height: 68px;
         }
       }
     }
@@ -180,4 +182,40 @@ dashboard-content {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden; // Stop weird right gap scrolling happening when iOS momentus scrolling applied
   height: 100%;
+}
+
+// Menu tree
+ul.tree-ul li {
+  cursor:pointer;
+}
+.active1{
+
+  .iconplus {
+    display: none !important;
+  }
+
+  .iconminus {
+    display: inline-block;
+  }
+
+  ul.active-inner {
+    display:block !important;
+    top: 0;
+    li.child-li {
+      padding-left: 20px;
+      height: 100%;
+
+      ul.active-inner__inner {
+        display: block !important;
+        top: 0;
+      }
+    }
+  }
+}
+
+i.fa-minus-circle {
+  display: none;
+}
+
+.activechild {
 }

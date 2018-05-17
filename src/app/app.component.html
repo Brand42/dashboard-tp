@@ -52,17 +52,55 @@
 
             <div class="sidebar-main__menu" [@sideMenuAnime]="openClose">
                 <button (click)="hideAndShow()" role="button" class="btn-sidemenu__close"><i class="fas fa-angle-left"></i></button>
-                <ul>
+
+                <ul class="tree-ul">
                     <li>MyAAT</li>
-                    <li>Training and assessment</li>
-                    <li>Professional zone</li>
-                    <li>My career</li>
-                    <li>Support resources</li>
-                    <li>My membership</li>
-                    <li>News and events</li>
-                    <br><br>
-                    <li>aat.org.uk</li>
+                    <li *ngFor="let n of menuList" (click)="select(n.name);"
+                        [ngClass]="{active1: isActive(n.name)}">
+
+                        <span>{{n.name}}</span>
+
+                        <i [ngClass]="{iconplus: isActive(n.name)}" class="fas fa-plus-circle"></i>
+                        <i [ngClass]="{iconminus: isActive(n.name)}" class="fas fa-minus-circle"></i>
+
+                        <ul class="active-inner" style="display:none;">
+
+                            <li class="child-li" *ngFor="let child of n.subMenu1" (click)="select1(n.subMenu1);"
+                                [ngClass]="{activechild: isActiveChild(n.subMenu1)}">
+                                {{child}}
+                                <ul class="active-inner__inner" style="display:none;">
+                                    <li class="grandchild-li-inner" *ngFor="let grandchild of n.subsubMenu1">
+                                        {{grandchild}}
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="child-li" *ngFor="let child of n.subMenu2" (click)="select1(n.subMenu2);"
+                                [ngClass]="{activechild: isActiveChild(n.subMenu2)}">
+                                {{child}}
+                                <ul class="active-inner__inner" style="display:none;">
+                                    <li class="grandchild-li-inner" *ngFor="let grandchild of n.subsubMenu2">
+                                        {{grandchild}}
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </li>
                 </ul>
+
+                <!--<ul>-->
+                    <!--<li>MyAAT</li>-->
+                    <!--<li>Training and assessment</li>-->
+                    <!--<li>Professional zone</li>-->
+                    <!--<li>My career</li>-->
+                    <!--<li>Support resources</li>-->
+                    <!--<li>My membership</li>-->
+                    <!--<li>News and events</li>-->
+                    <!--<br><br>-->
+                    <!--<li>aat.org.uk</li>-->
+                <!--</ul>-->
 
             </div>
             <!--sidebar-main__menu-->

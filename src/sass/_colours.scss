@@ -23,7 +23,10 @@ $black: #1A1A1A !default;
 
 $ui-grey-1:               #F8F8F8;
 $ui-grey-2:               #DFE1E5;
+//$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$ui-grey-2-1: darken( $ui-grey-2, 1% );
 $ui-grey-3:               #C3C3C3;
+$ui-grey-3-15: lighten( $ui-grey-3, 15% );
 $ui-grey-4:               #4A4A4A;
 
 // Notifications
