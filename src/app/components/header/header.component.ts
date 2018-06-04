@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   header = {
       firstname: 'John',
-      lastname: 'Snow',
+      lastname: 'Smith',
       content: 'Some home content.',
       // image: 'https://www.aat.org.uk/assets/img/frontpage/img_full.jpg'
   };
